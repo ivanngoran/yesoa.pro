@@ -8,7 +8,7 @@ Site statique (HTML/CSS/JS, sans build). Ouvrir `index.html` ou servir le dossie
 - Formulaire : créer une clé gratuite sur https://web3forms.com (avec l'email qui recevra les demandes)
   et remplacer `VOTRE_CLE_WEB3FORMS` dans index.html. Tant que ce n'est pas fait, le formulaire ouvre le client mail.
 - Email de contact (`contact@yesoa.pro`) et horaires si différents
-- Photos avant/après : remplacer les visuels temporaires de `assets/img/realisations/` (mêmes noms, format 3:2)
+- Photos avant/après : `assets/img/realisations/<nom>-<avant|apres>-<800|1376>.webp` (16:9, WebP)
 - Mentions légales (`mentions-legales.html`)
 
 ## Déploiement

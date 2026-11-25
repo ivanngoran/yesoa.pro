@@ -354,10 +354,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .page h2 { font-size: 1.4rem; margin-top: 2rem; }
 
 /* ---------- Réalisations : avant / après ---------- */
-.ba-grid { display: grid; gap: clamp(16px, 2.4vw, 28px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.ba-grid { display: grid; gap: clamp(24px, 3vw, 40px) clamp(16px, 2.4vw, 28px); grid-template-columns: repeat(2, 1fr); }
+.ba-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(20px, 3vw, 40px); align-items: center; }
+.ba-featured figcaption { padding: 0; }
+.ba.ba-featured figcaption strong { display: block;  font-size: clamp(1.3rem, 2.2vw, 1.75rem); line-height: 1.2; margin-bottom: .5rem; }
+.ba.ba-featured figcaption span:last-child { font-size: 1rem; }
+.ba-cat { color: var(--gold-dark) !important; font-size: .75rem !important; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .25rem; }
+.ba-cta { text-align: center; margin: clamp(32px, 4vw, 48px) 0 0; }
+@media (max-width: 920px) { .ba-featured { grid-template-columns: 1fr; } .ba-featured figcaption { padding: 0 .25rem; } }
+@media (max-width: 680px) { .ba-grid { grid-template-columns: 1fr; } }
 .ba { margin: 0; }
 .ba-frame {
-  position: relative; aspect-ratio: 3 / 2; overflow: hidden;
+  position: relative; aspect-ratio: 1376 / 768; overflow: hidden;
   border-radius: var(--radius); box-shadow: var(--shadow); background: var(--bg-soft);
   user-select: none; touch-action: pan-y;
 }
