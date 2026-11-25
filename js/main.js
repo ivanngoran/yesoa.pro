@@ -29,7 +29,7 @@
   if (year) year.textContent = new Date().getFullYear();
 
   // Apparition au scroll
-  const targets = document.querySelectorAll('.ba, .service-card, .steps li, .why-list li, .section-head, .contact-form');
+  const targets = document.querySelectorAll('.ba, .testimonial, .service-card, .steps li, .why-list li, .section-head, .contact-form');
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     targets.forEach(el => el.classList.add('reveal'));
     const io = new IntersectionObserver(entries => {

@@ -114,7 +114,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand-text strong { font-size: 1.2rem; font-weight: 800; letter-spacing: .06em; }
 .brand-text small { font-size: .72rem; font-weight: 600; color: var(--gold-dark); letter-spacing: .14em; text-transform: uppercase; }
 
-.nav { display: flex; align-items: center; gap: 1.6rem; }
+.nav { display: flex; align-items: center; gap: 1.6rem; white-space: nowrap; }
 .nav a:not(.btn) { color: var(--ink); font-weight: 600; font-size: .95rem; position: relative; }
 .nav a:not(.btn)::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px;
@@ -131,7 +131,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 920px) {
+@media (max-width: 1180px) {
   .nav-toggle { display: flex; }
   .nav {
     position: absolute; top: 72px; left: 0; right: 0;
@@ -396,3 +396,27 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .ba figcaption strong { color: var(--ink); font-size: 1.05rem; }
 .ba figcaption span { color: var(--muted); font-size: .92rem; }
 .section-head .ba-note { font-size: .8rem; color: var(--muted); margin: -.5rem 0 0; font-style: italic; }
+
+/* ---------- Témoignages ---------- */
+.testimonials { display: grid; gap: clamp(16px, 2vw, 24px); grid-template-columns: repeat(3, 1fr); }
+.testimonial {
+  margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 1.4rem;
+  background: #fff; border-radius: var(--radius); padding: 3rem 1.6rem 1.5rem;
+  box-shadow: 0 1px 0 var(--line); position: relative;
+}
+.testimonial::before {
+  content: "“"; position: absolute; top: .3rem; left: 1.4rem;
+  font-size: 4.5rem; line-height: 1; font-weight: 800; color: var(--mint);
+}
+.testimonial blockquote { margin: 0; }
+.testimonial blockquote p { margin: 0; color: var(--text); font-size: .97rem; line-height: 1.7; }
+.testimonial figcaption { display: flex; align-items: center; gap: .8rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+.testimonial figcaption strong { display: block; color: var(--ink); font-size: .98rem; }
+.testimonial figcaption small { display: block; color: var(--gold-dark); font-size: .82rem; font-weight: 600; line-height: 1.35; }
+.avatar {
+  flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--blue), var(--teal));
+}
+.testimonial:nth-child(3n+2) .avatar { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+@media (max-width: 1000px) { .testimonials { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .testimonials { grid-template-columns: 1fr; } }
