@@ -395,3 +395,4 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .ba figcaption { display: flex; flex-direction: column; padding: 1rem .25rem 0; }
 .ba figcaption strong { color: var(--ink); font-size: 1.05rem; }
 .ba figcaption span { color: var(--muted); font-size: .92rem; }
+.section-head .ba-note { font-size: .8rem; color: var(--muted); margin: -.5rem 0 0; font-style: italic; }
